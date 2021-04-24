@@ -2,7 +2,7 @@ package uebungen.uebung2;
 
 public class TicTacToe 
 {
-	enum State {EMPTY, RED, BLACK};
+	//enum State {EMPTY, RED, BLACK};
 	State[][] field;
 
 	public TicTacToe()
@@ -45,48 +45,56 @@ public class TicTacToe
 	
 	public boolean gewonnen()
 	{
-		boolean gewonnen = false;
 		for(int z=0; z<field.length; z++)
 		{
 			if(field[z][0] != State.EMPTY && 
-			   field[z][0] == field[z][1] &&
-			   field[z][0] == field[z][2])
+					field[z][0] == field[z][1] &&
+					field[z][0] == field[z][2])
 			{
-				gewonnen = true;
-				return gewonnen;
+				System.out.print("Gewonnen hat: " + field[z][0]);
+				return true;
 			}
 		}
-		if(!gewonnen)
+		for(int s=0; s<field[0].length; s++)
 		{
-			for(int s=0; s<field[0].length; s++)
+			if(field[0][s] != State.EMPTY &&
+					field[0][s] == field[1][s] &&
+					field[0][s] == field[2][s])
 			{
-				if(field[0][s] != State.EMPTY &&
-				   field[0][s] == field[1][s] &&
-				   field[0][s] == field[2][s])
-				{
-					gewonnen = true;
-					return gewonnen;
-				}
+				System.out.print("Gewonnen hat: " + field[0][s]);
+				return true;
 			}
 		}
-		if(!gewonnen && field[0][0] != State.EMPTY &&
+	
+		if(field[0][0] != State.EMPTY &&
 		   field[0][0] == field[1][1] &&
 		   field[0][0] == field[2][2])
 		{
-			gewonnen = true;
-			return gewonnen;
+			System.out.println("Gewonnen hat: " + field[1][1]);
+			return true;
 		}
-		if(!gewonnen && field[0][2] != State.EMPTY &&
+		if(field[0][2] != State.EMPTY &&
 		   field[0][2] == field[1][1] &&
 		   field[0][2] == field[2][0])
 		{
-			gewonnen = true;
+			System.out.println("Gewonnen hat: " + field[1][1]);
+			return true;
 		}
-		return gewonnen;
+		return false;
 	}
 	
 	public boolean unentschieden()
 	{
+		for(int i=0; i<this.field.length; i++)
+		{
+			for(int j=0; j<this.field[i].length; j++)
+			{
+				if(this.field[i][j] == State.EMPTY)
+				{
+					return false;
+				}
+			}
+		}
 		if(!this.gewonnen())
 		{
 			return true;

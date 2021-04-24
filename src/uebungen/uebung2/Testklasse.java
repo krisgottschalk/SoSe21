@@ -1,6 +1,6 @@
 package uebungen.uebung2;
 
-import uebungen.uebung2.TicTacToe.State;
+//import uebungen.uebung2.TicTacToe.State;
 
 public class Testklasse {
 
