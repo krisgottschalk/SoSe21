@@ -2,8 +2,5 @@
 .project
 .settings
 bin
-/src/uebungen/
-/src/chapters/*
-/uebungen
-/chapters
-*.Uebung1.java
+src/uebungen
+
