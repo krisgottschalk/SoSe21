@@ -6,4 +6,4 @@ bin
 /src/chapters/*
 /uebungen
 /chapters
-
+*.Uebung1.java
