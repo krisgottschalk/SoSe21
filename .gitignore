@@ -1,6 +1,8 @@
-.classpath
+#.classpath
 .project
 .settings
 bin
-SoSe21/src
+src/uebungen
+src/chapters
+
 
