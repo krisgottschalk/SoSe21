@@ -2,6 +2,6 @@
 .project
 .settings
 bin
-src/uebungen
-src/chapters
+/src/uebungen
+/src/chapters
 
