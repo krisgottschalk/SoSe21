@@ -13,7 +13,7 @@ public class Exceptions {
 	{
 		return arr[index];
 	}
-	
+
 	public static char charAt(String s, int index)
 	{
 		return s.charAt(index);
@@ -35,7 +35,7 @@ public class Exceptions {
 		{
 			System.out.println("Kein Index des Arrays");
 		}
-		
+
 		int arr[] = {1, 2, 3, 4 };
 		try {
 			int value = getValueAtIndex(arr, 4);
@@ -45,7 +45,7 @@ public class Exceptions {
 		{
 			System.out.println("Kein Index des Arrays");
 		}
-		
+
 		String s = "Hallo!";
 		try {
 			char c = charAt(s, 6);
@@ -55,7 +55,7 @@ public class Exceptions {
 		{
 			System.out.println("Kein Index des Strings");
 		}
-		
+
 		boolean eingabeOk = false;
 		int zahl = 0;
 		while(!eingabeOk)
@@ -71,11 +71,11 @@ public class Exceptions {
 			}
 		}
 		System.out.println(zahl);
-		
-		
-		
-		
-		
+
+
+
+
+
 	}
 
 }
