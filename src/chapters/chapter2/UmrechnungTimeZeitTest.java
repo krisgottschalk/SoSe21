@@ -167,7 +167,7 @@ class UmrechnungTimeZeitTest {
 	}
 	
 	@Test
-	void testGetMin1pm()
+	void testGetMinutes1pm()
 	{
 		// given (preparation)
 		UmrechnungTimeZeit utz = new UmrechnungTimeZeit();
@@ -176,7 +176,7 @@ class UmrechnungTimeZeitTest {
 		String minutes = utz.getMinutesStr("1:00 pm");
 		
 		// then (verification)
-		assertEquals(00, minutes); 
+		assertEquals("00", minutes); 
 	}
 	
 	@Test
@@ -189,7 +189,7 @@ class UmrechnungTimeZeitTest {
 		String minutes = utz.getMinutesStr("11:00 pm");
 		
 		// then (verification)
-		assertEquals(00, minutes); 
+		assertEquals("00", minutes); 
 	}
 
 
