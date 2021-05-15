@@ -6,7 +6,7 @@ public class UmrechnungTimeZeit {
 	public String convert(String time)
 	{ 
 		final int LAST_THREE_CHARS = 3; // " pm" or " am"
-		if(time.endsWith("am"))
+		if(time.endsWith("am")) 
 		{
 			return time.substring(0, time.length()-LAST_THREE_CHARS); 
 		}

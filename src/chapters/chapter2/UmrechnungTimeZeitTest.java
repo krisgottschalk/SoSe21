@@ -8,7 +8,7 @@ class UmrechnungTimeZeitTest {
 
 	@Test
 	void testConvert1amTo1() {
-		// given (preparation)
+		// given (preparation) 
 		UmrechnungTimeZeit utz = new UmrechnungTimeZeit();
 		
 		// when (execution)
