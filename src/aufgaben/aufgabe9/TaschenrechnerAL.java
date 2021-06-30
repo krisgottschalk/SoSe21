@@ -81,220 +81,6 @@ public class TaschenrechnerAL extends JFrame implements ActionListener
 		b17.addActionListener(this);
 		b18.addActionListener(this);
 		
-		
-		/*
-		b1.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				display.setText(str1 + "1");
-				
-			}
-		});
-		
-		b2.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				display.setText(str1 + "2");
-			}
-		});
-		
-		b3.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				display.setText(str1 + "3");
-			}
-		});
-		
-		b4.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				display.setText(str1 + "4");
-			}
-		});
-		
-		b5.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				display.setText(str1 + "5");
-			}
-		});
-		
-		b6.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				display.setText(str1 + "6");
-			}
-		});
-		
-		b7.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				display.setText(str1 + "7");
-			}
-		});
-		
-		b8.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				display.setText(str1 + "8");
-			}
-		});
-		
-		b9.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				display.setText(str1 + "9");
-			}
-		});
-		
-		b10.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				display.setText(str1 + "(");
-			}
-		});
-		
-		b11.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				display.setText(str1 + "0");
-			}
-		});
-		
-		b12.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				display.setText(str1 + ")");
-			}
-		});
-		
-		b13.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				nr1 = Integer.parseInt(str1);
-				display.setText(str1 + "\u00D7");
-				op = "*";
-				str1 = "0";
-			}
-		});
-		
-		b14.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				display.setText(str1 + "/");
-				op = "/";
-				nr1 = Integer.parseInt(str1);
-				str1 = "";
-			}
-		});
-		
-		b15.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				nr1 = Integer.parseInt(str1);
-				display.setText(str1 + "+");
-				op = "+";
-				str1 = "0";
-			}
-		});
-		
-		b16.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				display.setText(str1 + "-");
-				op = "-";
-				nr1 = Integer.parseInt(str1);
-				str1 = "";
-			}
-		});
-		
-		b17.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				str1 = display.getText();
-				display.setText(str1 + ".");
-			}
-		});
-		
-		b18.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				nr2 = Integer.parseInt(str1);
-				if(op.equals("+"))
-				{
-					result = nr1+nr2;
-				}
-				if(op.equals("-"))
-				{
-					result = nr1-nr2;
-				}
-				if(op.equals("*"))
-				{
-					result = nr1*nr2;
-				}
-				if(op.equals("/"))
-				{
-					result = nr1/nr2;
-				}
-				display.setText(String.valueOf(result));
-				
-			}
-		});
-		*/
-
-		
 		unten.add(b1);
 		unten.add(b2);
 		unten.add(b3);
@@ -333,26 +119,29 @@ public class TaschenrechnerAL extends JFrame implements ActionListener
 		{
 			click = true;
 			op = e.getActionCommand().toString();
-
 		} 
-		else {
-			if (e.getActionCommand().toString().equals("C")) {
+		else 
+		{
+			if (e.getActionCommand().toString().equals("C")) 
+			{
 				str1 = "";
 				display.setText(str1);
 			}
-			else {
-				if (click) {
+			else 
+			{
+				if (click) 
+				{
 					click = false;
 					str1 = display.getText();
 					nr1 = Integer.parseInt(str1);
 					str1 = "";
 					display.setText(str1 + e.getActionCommand().toString());
-				} else {
+				} 
+				else {
 					str1 = display.getText();
 					display.setText(str1 + e.getActionCommand().toString());
-				}
+					}
 			}
-
 
 			if (e.getActionCommand().toString().equals("=")) {
 				nr2 = Integer.parseInt(str1);
@@ -374,5 +163,6 @@ public class TaschenrechnerAL extends JFrame implements ActionListener
 				display.setText(String.valueOf(result));
 			}
 		}
-	}}
+	}
+	}
 
